@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id="app">
-		<a :href="url" target="_blank">{{ pagina }}</a>
+		<a v-if="mostrar" :href="url" target="_blank">Ir a {{ pagina }}</a>
 	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
