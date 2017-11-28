@@ -19,6 +19,23 @@
 			<h2>Subtítulo</h2>
 			<a :href="url" target="_blank">Ir a {{ pagina }}</a>
 		</template>
+
+		<hr>
+		<!-- 
+			La diferencia entre 'v-if' y 'v-show' es que 'v-if' cuando está
+			en FALSE elimina el elemento de DOM, en cambio 'v-show' para ocultarlo
+			le agrega el atributo 'style' y le asigna la propiedad 'display:none',
+			al final elemento que de la siguiente manera: <div style="display:none;"></div>
+		-->
+		<div v-show="mostrar">			
+			<h1>Título 2</h1>
+			<h2>Subtítulo 2</h2>
+			<a :href="url" target="_blank">Ir a {{ pagina }}</a>
+		</div>
+
+		<div v-show="!mostrar">
+			Contenido oculto.
+		</div>
 	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
