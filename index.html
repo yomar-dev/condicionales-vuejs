@@ -7,7 +7,11 @@
 </head>
 <body>
 	<div id="app">
-		<a v-if="mostrar" :href="url" target="_blank">Ir a {{ pagina }}</a>
+		<div v-if="mostrar">			
+			<h1>Título</h1>
+			<h2>Subtítulo</h2>
+			<a :href="url" target="_blank">Ir a {{ pagina }}</a>
+		</div>
 	</div>
 	
 	<script src="https://unpkg.com/vue"></script>
